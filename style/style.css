@@ -43,9 +43,9 @@
     */
     
     --cor0:#4f6f7a;
-    --cor1:rgb(207,193,159);
-    --cor2:rgb(249, 250, 251);
-    --cor3:rgba(37, 42, 51, 0.199);
+    --cor1:#cfc19f;
+    --cor2:#f9fafb;
+    --cor3:rgba(37, 42, 51, 0.2);
     /*Fontes*/
     --font1:"Bebas Neue", sans-serif;
     --font2:"Source Code Pro", monospace;
@@ -117,4 +117,14 @@ header .title p{
   max-width: 700px;
   margin: auto;
   text-shadow: 2px 2px 1px var(--cor3);
+}
+main{
+  background-color: var(--cor2);
+  min-width: 300px;
+  max-width: 1200px;
+  padding:20px;
+  margin:auto;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 10px var(--cor3);
+  
 }
