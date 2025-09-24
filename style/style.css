@@ -28,7 +28,7 @@
 */
 
 :root{
-    /*Cores*/
+    /*Cores
     --cor0:rgb(59, 130, 246);
     --cor0a:rgba(59, 131, 246, 0.733);
     --cor1:rgb(82, 128, 202);
@@ -40,25 +40,30 @@
     --cor7:rgb(31, 41, 55);
     --cor8font:#ffffff;
     --cor9font:#000000;
+    */
+    
+    --cor0:#4f6f7a;
+    --cor1:rgb(207,193,159);
+    --cor2:rgb(249, 250, 251);
+    --cor3:rgba(37, 42, 51, 0.199);
     /*Fontes*/
     --font1:"Bebas Neue", sans-serif;
     --font2:"Source Code Pro", monospace;
     --font3:"Source Sans 3", sans-serif;
 }
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-    
-}
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
 
+}
 header{
   display:flex;
   background:var(--cor2);
   flex-direction:column;
   text-align: center;
-  color:var(--cor8font);
+  color:var(--cor1);
 }
 header .logo{
   display:flex;
@@ -71,6 +76,27 @@ header .logo{
   font-weight: bolder;
   color: var(--cor0);
 }
+header .logo nav{
+  background-color: var(--cor2);
+  display: flex;
+  margin-left: auto;
+}
+header .logo nav a{
+  color: var(--cor0);
+  font-size: 16px;
+  padding: 5px 5px 5px 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: var(--font3);
+  font-weight: bold;
+  transition-duration: 0.2s;
+  margin:0px 5px 0px 5px;
+}
+header .logo nav a:hover{
+  background-color: var(--cor1);
+  color: var(--cor0);
+  font-weight: bold;
+}
 header .title{
   background-image: linear-gradient(to bottom, var(--cor0), var(--cor0));
 }
@@ -80,32 +106,15 @@ header .title h1{
   font-size: 48px;
   font-style: normal;
   font-weight: bolder;
-  text-shadow: 2px 2px 1px var(--cor6);
-  
-  
+  text-shadow: 2px 2px 1px var(--cor3);
 }
 header .title p{
-  padding: 15px 0px 100px 0px;
+  padding: 15px 0px 80px 0px;
   font-family: var(--font3);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   max-width: 700px;
   margin: auto;
-  text-shadow: 2px 2px 1px var(--cor6);
+  text-shadow: 2px 2px 1px var(--cor3);
 }
-
-/*
-header > p{
-    font-family: var(--font2);
-    background:var(--cor2);
-    color:var(--cor0);
-    font-size: 24px;
-    font-weight: bolder;
-}
-header > span{
-    font-family: var(--font2);
-    font-size: 16px;
-    font-weight: bolder;
-}
-*/
