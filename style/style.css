@@ -46,6 +46,7 @@
     --cor1:#cfc19f;
     --cor2:#f9fafb;
     --cor3:rgba(37, 42, 51, 0.2);
+    --cor4:rgb(37, 42, 51);
     /*Fontes*/
     --font1:"Bebas Neue", sans-serif;
     --font2:"Source Code Pro", monospace;
@@ -127,4 +128,13 @@ main{
   margin-bottom: 30px;
   box-shadow: 0px 0px 10px var(--cor3);
   
+}
+
+footer{
+  background-color: var(--cor4);
+  color: var(--cor2);
+  font-family: var(--font3);
+}
+svg{
+  background-color: var(--cor2);
 }
