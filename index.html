@@ -7,6 +7,30 @@
     <link rel="stylesheet" href="/style/style.css">
     <title>WebDev</title>
 </head>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.carousel-track');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    const cardWidth = 350+32;
+    let scrollPosition = 0;
+    nextBtn.onclick = () => {
+        scrollPosition += cardWidth;
+        track.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+        updateBtns();
+    };
+    prevBtn.onclick = () => {
+        scrollPosition -= cardWidth;
+        track.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+        updateBtns();
+    };
+    function updateBtns(){
+        prevBtn.disabled = scrollPosition <= 0;
+        nextBtn.disabled = scrollPosition >= (track.scrollWidth - track.clientWidth-1);
+    }
+    updateBtns();
+});
+</script>
 <body>
     <header>
         <div class="logo">
@@ -30,7 +54,6 @@
     <main>
         <article class="category">
             <h2>Categorias</h2>
-
             <div class="category-cards">
                 <div class="category-card">
                     <div class="category-icon">
@@ -60,8 +83,78 @@
             </div>
         </article>
 
+        <article class="featured-tools">
+            <div class="featured-header">
+                <h2>Design</h2>
+            </div>
+            <div class="carousel">
+                <button class="carousel-btn prev" arial-label="Anterior">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="12" fill="#e5e7eb"/>
+                        <path d="M14 8l-4 4 4 4" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <div class="carousel-track">
+                    <div class="tool-card">
+                        <div class="tool-img"></div>
+                        <div class="tool-info">
+                            <div class="tool-title">Figma<span class="tool-free">Free</span></div>
+                            <div class="tool-desk">Ferramenta de design de interface colaborativa</div>
+                            <div class="tool-rating"><span class="star">&#9733;</span>177k</div>
+                        </div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-img"></div>
+                        <div class="tool-info">
+                            <div class="tool-title">Figma<span class="tool-free">Free</span></div>
+                            <div class="tool-desk">Ferramenta de design de interface colaborativa</div>
+                            <div class="tool-rating"><span class="star">&#9733;</span>177k</div>
+                        </div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-img"></div>
+                        <div class="tool-info">
+                            <div class="tool-title">Figma<span class="tool-free">Free</span></div>
+                            <div class="tool-desk">Ferramenta de design de interface colaborativa</div>
+                            <div class="tool-rating"><span class="star">&#9733;</span>177k</div>
+                        </div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-img"></div>
+                        <div class="tool-info">
+                            <div class="tool-title">Figma<span class="tool-free">Free</span></div>
+                            <div class="tool-desk">Ferramenta de design de interface colaborativa</div>
+                            <div class="tool-rating"><span class="star">&#9733;</span>177k</div>
+                        </div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-img"></div>
+                        <div class="tool-info">
+                            <div class="tool-title">Figma<span class="tool-free">Free</span></div>
+                            <div class="tool-desk">Ferramenta de design de interface colaborativa</div>
+                            <div class="tool-rating"><span class="star">&#9733;</span>177k</div>
+                        </div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-img"></div>
+                        <div class="tool-info">
+                            <div class="tool-title">Figma<span class="tool-free">Free</span></div>
+                            <div class="tool-desk">Ferramenta de design de interface colaborativa</div>
+                            <div class="tool-rating"><span class="star">&#9733;</span>177k</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn next" arial-label="Próximo">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="12" fill="#e5e7eb"/>
+                        <path d="M10 8l4 4-4 4" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </article>
+ 
         <article>
-            <h2>Ferramentas em Destaque</h2>
             VS Code
             Editor de código leve com recursos poderosos
             Free
@@ -74,9 +167,6 @@
             Netlify
             Plataforma de hospedagem moderna para sites estáticos
             Free
-        </article>
-
-        <article>
             <h2>Como Funciona</h2>
             1 Ferramentas de navegador
             Explore nossa coloção selecionada de ferramentas organiadas por Categorias
@@ -151,7 +241,7 @@
             <div class="company">
                 <h3>Companhia</h3>
                 <ul>
-                    <li>Sobre nós</li>
+                    <li>Sobre</li>
                     <li>Contatos</li>
                     <li>Blog</li>
                 </ul>
