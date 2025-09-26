@@ -8,6 +8,7 @@ https://startbootstrap.com/previews/resume
 https://brittanychiang.com/
 https://www.rammaheshwari.com/
 https://tamalsen.dev/
+https://icons.getbootstrap.com/
 
 Dev web
 Ajuda a verificar as dimensões da tela

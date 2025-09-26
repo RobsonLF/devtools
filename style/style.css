@@ -220,7 +220,7 @@ main{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 40px 24px 40px;
+  margin: 0 40px 24px 55px;
 }
 .featured-header h2{
   font-size: 32px;
