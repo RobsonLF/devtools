@@ -259,10 +259,16 @@ main{
 .carousel-track{
   display: flex;
   gap: 32px;
-  overflow: hidden;
-  width: 100%;
-  
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: auto;
   scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding-bottom: 16px;
+  scroll-behavior: smooth;
+}
+.carousel-track::-webkit-scrollbar{
+  display: none;
 }
 .tool-card{
   background: var(--cor6);
